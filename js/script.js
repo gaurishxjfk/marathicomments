@@ -25,26 +25,15 @@ $('.testimonial-slider').slick({
     ]
   });
 
-  function copyClipboard() {
-    var elm = document.getElementById("divClipboard");
-    // for Internet Explorer
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
   
-    if(document.body.createTextRange) {
-      var range = document.body.createTextRange();
-      range.moveToElementText(elm);
-      range.select();
-      document.execCommand("Copy");
-      alert("Copied div content to clipboard");
-    }
-    else if(window.getSelection) {
-      // other browsers
-  
-      var selection = window.getSelection();
-      var range = document.createRange();
-      range.selectNodeContents(elm);
-      selection.removeAllRanges();
-      selection.addRange(range);
-      document.execCommand("Copy");
-      alert("Copied div content to clipboard");
-    }
-  }
+  $temp.remove();
+  alert ("copied");
+
+
+
+}
