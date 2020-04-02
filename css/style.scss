@@ -36,6 +36,17 @@ body {
   .heading{
     @include colorFont(#194866, 36px ,bold);
   }
+  .descr{
+    color:#194866;
+    font-size: 18px;
+    .name{
+      text-decoration: none;
+   
+      &:hover{
+        font-weight: bold;
+      }
+    }
+  }
   .testimonial-slider{
     width: 55%;  
     .testimonials__card{
@@ -58,6 +69,14 @@ body {
         @include colorFont(#194866, 18px ,normal);
         font-style: italic;
         
+      }
+      .ctc{
+        background: #F0F9FF;
+        @include colorFont(#194866, 14px ,normal);
+        box-shadow: 0px 3px 4px rgba(22, 63, 89, 0.15);
+          border: none;
+          border-radius: 5px;
+          padding:2%;
       }
     }
   }
@@ -95,6 +114,7 @@ body {
     .heading{
       @include colorFont(#194866, 30px ,bold);
     }
+
     .testimonial-slider{
       width: 98%;  
       .testimonials__card{
@@ -105,8 +125,8 @@ body {
           opacity: 0.5;
         }
         &--review{
-          width: 60%;
-          padding-top: 15%;
+          width: 75%;
+          padding-top: 18%;
         }
       }
     }
